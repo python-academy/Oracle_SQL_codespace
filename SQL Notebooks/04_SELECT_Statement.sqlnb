@@ -26,13 +26,9 @@ cells:
       FROM
       customers;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      UPPER( 'This is a string')
-      From
-      what_table;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### Dual Table"
+    languageId: markdown
   - kind: 2
     value: SELECT * FROM dual;
     languageId: oracle-sql
@@ -50,20 +46,9 @@ cells:
       FROM
       dual;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      column_1,
-      column_2,
-      column_3,
-      ...
-      FROM
-      table_nane
-      ORDER BY
-      column_1 [ASC I DESCJ [NULLS FIRST I NULLS LAST],
-      column_1 [ASC I DESC] [NULLS FIRST I NULLS LAST],
-      ...
-    languageId: oracle-sql
+  - kind: 1
+    value: "### Order by "
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -83,34 +68,6 @@ cells:
       customers
       ORDER BY
       name ASC;
-    languageId: oracle-sql
-  - kind: 2
-    value: ORDER BY name ASC
-    languageId: oracle-sql
-  - kind: 2
-    value: ORDER BY name
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      name,
-      address ,
-      credit_limit
-      FROM
-      customers
-      ORDER BY
-      name DESC;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-           first_name,
-           last_name
-      FROM
-           contacts
-      ORDER BY
-          first_name,
-          last_name DESC;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -180,20 +137,9 @@ cells:
       ORDER BY
           order_date DESC;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT DISTINCT colunn_l
-      FROM table;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-          DISTINCT column_1,
-      column_2,
-      column_3
-      FROM
-      table_name;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### Distinct clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -230,17 +176,6 @@ cells:
            locations
       ORDER BY
            state NULLS FIRST;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-           select_list
-      FROM
-           table_name
-      WHERE
-           search_condition
-      ORDER BY
-      sort_expression;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -289,11 +224,6 @@ cells:
     languageId: oracle-sql
   - kind: 2
     value: |
-      list_price BETWEEN 650 AND 680
-      list_price 650 ANO list_price <= 680
-    languageId: oracle-sql
-  - kind: 2
-    value: |
       SELECT
             product_name,
             category_id
@@ -304,12 +234,9 @@ cells:
       ORDER BY
            product_name;
     languageId: oracle-sql
-  - kind: 2
-    value: category_id IN (1, 4)
-    languageId: oracle-sql
-  - kind: 2
-    value: category_id = 1 OR category_id = 4
-    languageId: oracle-sql
+  - kind: 1
+    value: "### LIKE clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -330,14 +257,9 @@ cells:
       ORDER BY
            first_name;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-            Istprc,
-            prdnm
-      FROM
-         long_table_name;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### Alises Name"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -363,16 +285,6 @@ cells:
             employees ;
     languageId: oracle-sql
   - kind: 2
-    value: "ORA_00923: FROM keyword not found where expected"
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-           first name  || ' ' || last_name
-      FROM
-         employees;
-    languageId: oracle-sql
-  - kind: 2
     value: |
       SELECT
           first_name  || ' ' || last_name AS "FUll Name"
@@ -396,26 +308,4 @@ cells:
           products
       ORDER BY
           gross_profit DESC;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      table_name AS table_alias
-      table_name table_alias
-    languageId: oracle-sql
-  - kind: 2
-    value: table_name. column_name
-    languageId: oracle-sql
-  - kind: 2
-    value: table_alias. column_name
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-        e. first_name employee,
-        m. first_name manager
-      FROM
-         employees e
-      INNER JOIN employees m
-      ON
-        m. employee_id = e. employee_id;
     languageId: oracle-sql
