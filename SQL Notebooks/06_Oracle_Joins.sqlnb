@@ -1,4 +1,7 @@
 cells:
+  - kind: 1
+    value: "### JOIN operations"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -80,36 +83,9 @@ cells:
       FULL JOIN palette_b b ON a.color = b.color
       WHERE a.id IS NULL OR b.id IS NULL;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      *
-      FROM
-      T1
-      INNER JOIN T2 ON join_predicate;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      *
-      FROM
-         orders
-      INNER JOIN order_items ON
-         order_items. order_id = orders. order_id
-      ORDER BY
-         order_date DESC;
-    languageId: oracle-sql
-  - kind: 2
-    value: order_items.order_id = orders.order_id
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      *
-      FROM
-      T1
-      INNER JOIN T2 USING( cl, c2,...);
-    languageId: oracle-sql
+  - kind: 1
+    value: "### INNER JOIN"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -161,15 +137,9 @@ cells:
       order_id DESC,
       item_id ASC;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-          coltnn_list
-       FROM
-          T1
-      LEFT JOIN T2 ON
-            join_predicate;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### LEFT JOIN"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -199,26 +169,6 @@ cells:
            customer.customer_id = orders.customer_id
       ORDER BY
             order_date DESC;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-           column_list
-      FROM
-         T1
-      LEFT JOIN T2 USING(c1,c2,c3, ...);
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-           column_list
-      FROM
-          t1
-      LEFT JOIN t2 ON
-          t1.c1 = t2.c1
-          AND tl.c2 = t2.c2
-          AND t1.c3 =t2.c3
-          AND ...;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -261,15 +211,9 @@ cells:
            enployee_id = salesman_id
       AND order_id = 58;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-         coltnn_list
-      FROM
-         T1
-      RIGHT OUTER JOIN T2 ON
-            join_predicate;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### RIGHT JOIN"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -286,25 +230,6 @@ cells:
       ORDER BY
             first_name,
             last_name;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-          column_list
-      FROM
-         T1
-      RIGHT OUTER JOIN T2 USING(c1,c2,c3);
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      column_list
-      FROM
-      T1
-      RIGHT OUTER JOIN T2 ON
-      Tl.cl - T2.cl
-      AND Tl.c2 - T2.c2
-      AND Tl.c3 - T2.c3;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -334,14 +259,9 @@ cells:
       WHERE
           employee_id = 57;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-          column_list
-      FROM
-         T1
-      CROSS JOIN T2;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### CROSS JOIN"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -352,28 +272,9 @@ cells:
           products
       CROSS JOIN warehouses;
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-         column_1ist
-      FROM
-         T t1
-      INNER JOIN T t2 ON
-      j  oin_predicate ;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      (e. first_name || ' ' || e.last_name) employee,
-      (m. first_name || ' ' || m.last_name) manager,
-      e. job_title
-      FROM
-      employee e
-      LEFT JOIN employee m ON
-      m.employee_id = e.manager_id
-      ORDER BY
-      manager;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### SELF JOIN"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT

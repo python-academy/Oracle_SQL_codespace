@@ -1,28 +1,7 @@
 cells:
-  - kind: 2
-    value: expression_1 AND expression_2
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-           order_id,
-           customer_id,
-           status,
-           order_date
-      FROM
-           orders
-      WHERE
-           status = 'Pending'
-           AND customer_id = 2
-      ORDER BY
-           order_date;
-    languageId: oracle-sql
-  - kind: 2
-    value: status = ' Pending '
-    languageId: oracle-sql
-  - kind: 2
-    value: customer_ld = 2
-    languageId: oracle-sql
+  - kind: 1
+    value: "### AND clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -39,6 +18,9 @@ cells:
       ORDER BY
              order_date;
     languageId: oracle-sql
+  - kind: 1
+    value: "### OR clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -53,26 +35,6 @@ cells:
          OR status 'Canceled '
       ORDER BY
       order_date DESC;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      status 'pending'
-      status = 'Canceled'
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-          order_id,
-          customer_id,
-      status,
-         salesman_id,
-         order_date
-      FROM
-           orders
-      WHERE
-           salesman_id IN (60, 61, 62)
-      ORDER BY
-            order_date DESC;
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -91,9 +53,9 @@ cells:
       ORDER BY
           order_date;
     languageId: oracle-sql
-  - kind: 2
-    value: expression [NOT] IN (vl,v2,...)
-    languageId: oracle-sql
+  - kind: 1
+    value: "### IN clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -136,6 +98,9 @@ cells:
       ORDER BY
       order_id;
     languageId: oracle-sql
+  - kind: 1
+    value: "### SubQuery"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -208,21 +173,9 @@ cells:
       ORDER BY
       customer_id;
     languageId: oracle-sql
-  - kind: 2
-    value: salesman_id NOT IN (60,61,62);
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      salesman_id != 60
-      AND salesman_id != 61
-      AND salesman_id != 62;
-    languageId: oracle-sql
-  - kind: 2
-    value: expression [ NOT ] BETWEEN low AND high
-    languageId: oracle-sql
-  - kind: 2
-    value: value >= low AND value <= high
-    languageId: oracle-sql
+  - kind: 1
+    value: "### BETWEEN clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -261,22 +214,9 @@ cells:
       ORDER BY
          order_date ;
     languageId: oracle-sql
-  - kind: 2
-    value: expresion [NOT] LIKE pattern [ ESCAPE escape_characters]
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-          first_name,
-          last_names
-          phone
-      FROM
-         contacts
-      WHERE
-         last name LIKE 'St%'
-      ORDER BY
-         last_name;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### LIKE clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -289,15 +229,6 @@ cells:
           last_name LIKE '%er'
       ORDER BY
           last_name;
-    languageId: oracle-sql
-  - kind: 2
-    value: '%er'
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      UPPER( last_name ) LIKE 'ST%'
-
-      LOWER(last_name LIKE 'st%'
     languageId: oracle-sql
   - kind: 2
     value: |
@@ -350,27 +281,6 @@ cells:
          first_name LIKE 'Je_%';
     languageId: oracle-sql
   - kind: 2
-    value: LIKE '%25!%% 'ESCAPE '!'
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      CREATE TABLE discounts
-      (
-           product_id NUMBER,
-           discount_message VARCHAR2(255) NOT NULL,
-           PRIMARY KEY( product_id ));
-
-      INSERT INTO discounts (product_id, discount_message)
-      VALUES(1,
-            'Buy 1 and Get 2S% OFF on 2nd ');
-      INSERT INTO discounts (product_id, discount_message)
-      VALUES(2,
-            'Buy 2 and Get 50% OFF on 3rd ');
-      INSERT INTO discounts(product_id, discount_massage)
-      VALUES(3,
-            'Buy 3 Get 1 free');
-    languageId: oracle-sql
-  - kind: 2
     value: |
       SELECT
            product_id ,
@@ -380,14 +290,14 @@ cells:
       WHERE
            discount_message LIKE '%25!%%' ESCAPE '!';
     languageId: oracle-sql
+  - kind: 1
+    value: "### NULL operations"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT * FROM orders
       WHERE salesman_id = NULL
       ORDER BY order_date DESC;
-    languageId: oracle-sql
-  - kind: 2
-    value: expression | column IS NOT NULL
     languageId: oracle-sql
   - kind: 2
     value: |

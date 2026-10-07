@@ -1,4 +1,7 @@
 cells:
+  - kind: 1
+    value: "### AVG() Function"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -86,15 +89,6 @@ cells:
     languageId: oracle-sql
   - kind: 2
     value: |
-      CREATE TABLE tests (
-      employee_id NUMBER PRIYARY KEY.
-      score NUMBER(3,1)
-      );
-      INSERT INTO tests(employee_id, score) VALIES(1, 95);
-      INSERT INTO tests(employee_id, score) VALIES(2, 70);
-      INSERT INTO tests(employee_id, score) VALIES(3, 60);
-      INSERT INTO tests(employee_id, score) VALIES(4, null);
-
       SELECT * FROM tests;
     languageId: oracle-sql
   - kind: 2
@@ -113,15 +107,6 @@ cells:
     languageId: oracle-sql
   - kind: 2
     value: |
-      CREATE TABLE items(val number);
-      INSERT INTO items(val) VALUES(1);
-      INSERT INTO items(val) VALUES(1);
-      INSERT INTO items(val) VALUES(2);
-      INSERT INTO items(val) VALUES(3);
-      INSERT INTO items(val) VALUES(NULL);
-      INSERT INTO items(val) VALUES(4);
-      INSERT INTO items(val) VALUES(NULL);
-
       SELECT * FROM items;
     languageId: oracle-sql
   - kind: 2

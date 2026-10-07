@@ -1,40 +1,7 @@
 cells:
-  - kind: 2
-    value: |
-      SELECT
-      column_list
-      FROM
-      T
-      GROJP BY c1,c2,c3;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      column_list
-      FROM
-      T
-      WHERE
-      condition
-      GROUP BY c1,c2,c3;
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      column_list
-      FROM
-      T
-      GROUP BY
-      ROLLUP(c1,c2,c3);
-    languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      status
-      FROM
-      orders
-      GROUP BY
-      status;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### GROUP BY Clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
@@ -110,17 +77,9 @@ cells:
       status
       );
     languageId: oracle-sql
-  - kind: 2
-    value: |
-      SELECT
-      column_list
-      FROM
-      T
-      GROUP BY
-      c1
-      HAVING
-      group_condition ;
-    languageId: oracle-sql
+  - kind: 1
+    value: "### HAVING Clause"
+    languageId: markdown
   - kind: 2
     value: |
       SELECT
